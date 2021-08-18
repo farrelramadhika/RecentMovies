@@ -22,6 +22,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/ytb"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:autoPlay="false"
@@ -30,7 +31,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:showYouTubeButton="false"
-                app:videoId="40jEPV-3-Lg" />
+                 />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -98,7 +99,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:text="Reviews"
-                android:textColor="@color/white"
+                android:textColor="@color/orange"
                 android:textSize="24dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
