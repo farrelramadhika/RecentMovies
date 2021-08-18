@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_navigation.xml">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.recentmovies.HomeMoviesFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_movies">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_ListGenre"
+            app:destination="@id/ListGenre" />
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_mainFragment_to_DetailMovie"
+            app:destination="@id/DetailMovie" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListGenre"
+        android:name="com.example.recentmovies.MovieListFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_movie_list">
+        <action
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            android:id="@+id/action_ListGenre_to_DetailMovie"
+            app:destination="@id/DetailMovie" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailMovie"
+        android:name="com.example.recentmovies.MovieDetailFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_movie_detail">
+
+    </fragment>
 
 </navigation>
